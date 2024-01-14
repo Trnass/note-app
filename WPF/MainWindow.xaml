@@ -1,0 +1,94 @@
+﻿<Window x:Class="Notepad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Notepad"
+        mc:Ignorable="d"
+        Title="Notepad"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Height="400"
+        Width="300"
+        Icon="Images/AppLogo.png">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="Images/AppLogo.png"
+               Grid.Column="1"
+               Grid.Row="0"/>
+
+        <TextBlock Text="Login"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"/>
+
+        <TextBox x:Name="UsernameTextBox"
+                 Grid.Row="2"
+                 Grid.Column="1"
+                 HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"/>
+
+        <TextBlock Text="Password"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"/>
+
+        <PasswordBox x:Name="PasswordBox"
+                     Grid.Row="4"
+                     Grid.Column="1"
+                     HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center"
+                     Background="Transparent"/>
+
+        <CheckBox x:Name="SaveLoginCheckBox"
+                  Content="Save login"
+                  Grid.Row="6"
+                  Grid.Column="1"/>
+
+        <Button x:Name="LoginButton"
+                Content="Login"
+                Click="LoginButtonClick"
+                Grid.Row="8"
+                Grid.Column="1"/>
+
+        <Button Click="RegisterButtonClick"
+                Grid.Row="10"
+                Grid.Column="1"
+                Foreground="Blue"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                AllowDrop="False">
+            <TextBlock>
+                <Underline>
+                    <Run Text="Register"/>
+                </Underline>
+            </TextBlock>
+        </Button>
+
+
+
+    </Grid>
+</Window>
